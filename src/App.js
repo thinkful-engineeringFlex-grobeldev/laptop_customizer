@@ -103,16 +103,17 @@ class App extends Component {
         <header>
           <h1>ELF Computing | Laptops</h1>
         </header>
-        <Mainform
-          features={this.props.features}
-          selected={this.state.selected}
-          handleUpdateFeature={(prev, option) => this.updateFeature(prev, option)}
-        ></Mainform>
-        <MainSummary
-          // features={features}
-          selected={this.state.selected}
-        ></MainSummary>
+
         <main>
+          <Mainform
+            features={this.props.features}
+            selected={this.state.selected}
+            handleUpdateFeature={(prev, option) => this.updateFeature(prev, option)}
+          ></Mainform>
+          <MainSummary
+            // features={features}
+            selected={this.state.selected}
+          ></MainSummary>
           {/* <form className="main__form">
             <h2>Customize your laptop</h2>
             {features}
